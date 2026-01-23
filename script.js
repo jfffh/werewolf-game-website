@@ -3,6 +3,8 @@ players = [
     "werewolf",
 ]
 
+extra_roles = []
+
 turn_order = [
     "werewolf",
     "seer",
@@ -17,7 +19,7 @@ current_turn = 0
 screen = "next_player"
 
 function get_next_player() {
-    document.getElementById("next_player_name").value = players[current_player]
+    document.getElementById("next_player_name").textContent = players[current_player]
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
