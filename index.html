@@ -9,22 +9,26 @@
     </head>
     <body>
         <div id = "next_player" class = "screen">
-            <div id = "next_player_name" class = "text_field"></div><br>
+            <h1 id = "next_player_name" class = "text_field"></h1>
             <button id = "start_turn" onclick = "start_turn()">Start Turn</button>
         </div>
 
         <div id = "standard_turn_screen" class = "screen">
-            <div id = "header" class = "text_field_header"></div><br>
-            <div id = "body" class = "text_field"></div><br>
-
-            <button id = "player_0"></button><br>
-            <button id = "player_1"></button><br>
-            <button id = "player_2"></button><br>
-            <button id = "player_3"></button><br>
-            <button id = "player_4"></button><br>
-            <button id = "card_0"></button><br>
-            <button id = "card_1"></button><br>
-            <button id = "card_2"></button><br>
+            <h1 id = "header" class = "text_field_header">This is the text field header</h1>
+            <p id = "body" class = "text_field">This is the text field</p>
+            
+            <div id="player_button_grid" class="button_container">
+                <button is="toggle-button" id = "player_0">Name</button>
+                <button is="toggle-button" id = "player_1">Name</button>
+                <button is="toggle-button" id = "player_2">Name</button>
+                <button is="toggle-button" id = "player_3">Name</button>
+                <button is="toggle-button" id = "player_4">Name</button>
+            </div>
+            <div id="card_button_grid" class="button_container">
+                <button is="toggle-button" radio id = "card_0">Card 1</button>
+                <button is="toggle-button" radio id = "card_1">Card 2</button>
+                <button is="toggle-button" radio id = "card_2">Card 3</button>
+            </div>
 
             <button id = "end_turn">End Turn</button>
         </div>

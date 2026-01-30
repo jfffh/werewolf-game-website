@@ -42,6 +42,29 @@ function show_current_screen() {
 }
 
 function start_turn() {
-    screen = "player_turn"
+    screen = "standard_turn_screen"
     show_current_screen()
 }
+
+// Toggle button class
+class ToggleButton extends HTMLButtonElement {
+    constructor() {
+        super();
+        this.addEventListener("click", () => {
+            if (this.hasAttribute("radio")) {
+                // deselect siblings if radio mode enabled
+                const siblings = Array.from(this.parentNode.children)
+                    .filter(child => child !== this)
+                for (let i=0; i<siblings.length; i++) {
+                    siblings[i].classList.remove("selected")
+                }
+                this.classList.add("selected")
+            
+            } else {
+                this.classList.toggle("selected")
+            }
+        });
+    }
+}
+
+customElements.define("toggle-button", ToggleButton, { extends: 'button' })

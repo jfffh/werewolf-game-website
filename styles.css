@@ -1,3 +1,40 @@
 .hidden {
     display: none !important;
 }
+
+#start_turn {
+    width: 100%
+}
+
+#end_turn {
+    width: 100%
+}
+
+.button_container {
+    margin-bottom: 20px;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+#player_button_grid {
+    display: grid;
+    grid-template-columns: auto;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
+    gap: 5px;
+}
+
+#card_button_grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+}
+
+button {
+    padding: 10px;
+}
+
+button:empty::before {
+    content:"\00A0";
+}
